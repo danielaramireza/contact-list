@@ -73,3 +73,21 @@ console.log(
 );
 
 console.log(listaDeContactos);
+
+//Función para borrar un contacto existente
+
+function eliminarContacto(nombreCompleto) {
+  let indice = listaDeContactos.indexOf(nombreCompleto);
+  console.log(indice);
+
+  if (indice >= 0) {
+    listaDeContactos.splice(indice, 1);
+  } else {
+    console.log(
+      `${nombreCompleto} no existe, por favor verifica el nombre completo`
+    );
+  }
+}
+
+eliminarContacto("Mateo restrepo mendoza");
+eliminarContacto("Lucia Vera Bedoya");
