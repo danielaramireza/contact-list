@@ -57,7 +57,7 @@ function agregarContacto(nombreCompleto) {
   listaDeContactos.push(nombreCompleto);
 }
 
-// Agregar un contacto nuevo
+// Agregar un contacto nuevo a la lista
 
 console.log(
   `El numero de contactos antes de agregar uno nuevo es ${listaDeContactos.length}`
@@ -74,7 +74,7 @@ console.log(
 
 console.log(listaDeContactos);
 
-//Función para borrar un contacto existente
+//Función para borrar un contacto existente de la lista
 
 function eliminarContacto(nombreCompleto) {
   let indice = listaDeContactos.indexOf(nombreCompleto);
@@ -91,3 +91,11 @@ function eliminarContacto(nombreCompleto) {
 
 eliminarContacto("Mateo restrepo mendoza");
 eliminarContacto("Lucia Vera Bedoya");
+
+//Función para imprimir en la consola los contactos de la lista
+
+function imprimirListaContactos() {
+  console.log(listaDeContactos);
+}
+
+imprimirListaContactos();
