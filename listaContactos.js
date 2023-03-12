@@ -50,3 +50,26 @@ let listaDeContactos = [
   "Lucia Vera Bedoya",
   "Cristian Taborda Bustos",
 ];
+
+//Función para añadir un contacto nuevo a la lista
+
+function agregarContacto(nombreCompleto) {
+  listaDeContactos.push(nombreCompleto);
+}
+
+// Agregar un contacto nuevo
+
+console.log(
+  `El numero de contactos antes de agregar uno nuevo es ${listaDeContactos.length}`
+);
+agregarContacto("Daniela Ramirez Alvarez");
+console.log(
+  `El numero de contactos después de agregar uno nuevo es ${listaDeContactos.length}`
+);
+console.log(
+  `El ultimo contacto agregado a la lista fue ${
+    listaDeContactos[listaDeContactos.length - 1]
+  }`
+);
+
+console.log(listaDeContactos);
