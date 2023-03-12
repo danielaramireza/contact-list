@@ -1,101 +1,152 @@
 let listaDeContactos = [
-  "Mateo Restrepo Mendoza",
-  "Carolina Ochoa Mejia",
-  "Adriana Cardona Velez",
-  "Adrian Rios Perez",
-  "Mariana Escalante Lopez",
-  "Erika Herrera Perez",
-  "Barbara Ruiz Diaz",
-  "Jorge Rodriguez Moreno",
-  "Mariela Gomez Sepulveda",
-  "Yolanda Roca Cabrera",
-  "Leonel Garcia Rojas",
-  "Carla Vargas Martinez",
-  "Fidel Quiroz Tangarife",
-  "Paola Delgado Sandoval",
-  "William Espinosa Ospina",
-  "Rafael Molina Hernandez",
-  "Patricia Ramirez Perez",
-  "Lorenzo Figueroa Morales",
-  "Camila Piedrahita Osorio",
-  "Felipe Zuluaga Arenas",
-  "Gisela Arango Rivera",
-  "Jorge Carrillo Giraldo",
-  "Antonio Posada Vergara",
-  "Antonella Palacio Toro",
-  "Paola Henao Franco",
-  "Sara Trujillo Saez",
-  "Valentina Tavera Vanegas",
-  "Carlos Tobon Guzman",
-  "Ariana Vidal Florez",
-  "Diego Arias Restrepo",
-  "Matias Guerra Serrano",
-  "Gabriela Garces Botero",
-  "Ana Cuellar Zambrano",
-  "Camilo Agudelo Rivas",
-  "Saul Medina Sarmiento",
-  "Miguel Arredondo Nolasco",
-  "Raul Castro Varela",
-  "Martha Cano Bustamante",
-  "Alfredo Meneses Sanchez",
-  "Daniela Zapata Montoya",
-  "Antonia Suarez Ramirez",
-  "Ignacio Villa Moreno",
-  "Alejandro Jaramillo Echeverri",
-  "Ricardo Velez Santamaria",
-  "Matilde Arboleda Uribe",
-  "Isabel Puerta Sierra",
-  "Edilberto Arango Garzon",
-  "Paula Escobar Garcia",
-  "Lucia Vera Bedoya",
-  "Cristian Taborda Bustos",
+  {
+    id: 1,
+    nombres: "Mateo",
+    apellidos: "Restrepo Mendoza",
+    telefono: 3104356783,
+    ubicaciones: {
+      ciudad: "Medellin",
+      direccion: "Calle 17 #76-23",
+    },
+  },
+  {
+    id: 2,
+    nombres: "Carolina",
+    apellidos: "Ochoa Mejia",
+    telefono: 3208675423,
+    ubicaciones: {
+      ciudad: "Bogota",
+      direccion: "Calle 20 #55-42",
+    },
+  },
+  {
+    id: 3,
+    nombres: "Adriana",
+    apellidos: "Cardona Velez",
+    telefono: 3119653164,
+    ubicaciones: {
+      ciudad: "Envigado",
+      direccion: "Calle 32 #12-65",
+    },
+  },
+  {
+    id: 4,
+    nombres: "Adrian",
+    apellidos: "Rios Perez",
+    telefono: 3112334612,
+    ubicaciones: {
+      ciudad: "Sabaneta",
+      direccion: "Carrera 65 #34-58",
+    },
+  },
+  {
+    id: 5,
+    nombres: "Mariana",
+    apellidos: "Escalante Lopez",
+    telefono: 3219513546,
+    ubicaciones: {
+      ciudad: "Itagui",
+      direccion: "Calle 7 #54-98",
+    },
+  },
+  {
+    id: 6,
+    nombres: "Erika",
+    apellidos: "Herrera Perez",
+    telefono: 3128215436,
+    ubicaciones: {
+      ciudad: "Caldas",
+      direccion: "Carrera 52 #38-95",
+    },
+  },
+  {
+    id: 7,
+    nombres: "Barbara",
+    apellidos: "Ruiz Diaz",
+    telefono: 3204336142,
+    ubicaciones: {
+      ciudad: "Medellin",
+      direccion: "Carrera 80 #65-15",
+    },
+  },
+  {
+    id: 8,
+    nombres: "Jorge",
+    apellidos: "Rodriguez Moreno",
+    telefono: 3103442187,
+    ubicaciones: {
+      ciudad: "Envigado",
+      direccion: "Calle 56 #54-97",
+    },
+  },
+  {
+    id: 9,
+    nombres: "Mariela",
+    apellidos: "Gomez Sepulveda",
+    telefono: 3115324531,
+    ubicaciones: {
+      ciudad: "Rionegro",
+      direccion: "Calle 55 #80-23",
+    },
+  },
+  {
+    id: 10,
+    nombres: "Yolanda",
+    apellidos: "Roca Cabrera",
+    telefono: 3205443876,
+    ubicaciones: {
+      ciudad: "Guarne",
+      direccion: "Carrera 54 #65-91",
+    },
+  },
+  {
+    id: 11,
+    nombres: "Leonel",
+    apellidos: "Garcia Rojas",
+    telefono: 3195537654,
+    ubicaciones: {
+      ciudad: "Caldas",
+      direccion: "Calle 30 #67-32",
+    },
+  },
+  {
+    id: 12,
+    nombres: "Carla",
+    apellidos: "Vargas Martinez",
+    telefono: 3108097643,
+    ubicaciones: {
+      ciudad: "Itagui",
+      direccion: "Calle 45 #23-65",
+    },
+  },
+  {
+    id: 13,
+    nombres: "Fidel",
+    apellidos: "Quiroz Tangarife",
+    telefono: 3016557843,
+    ubicaciones: {
+      ciudad: "Medellin",
+      direccion: "Carrera 67 #55-43",
+    },
+  },
+  {
+    id: 14,
+    nombres: "Paola",
+    apellidos: "Delgado Sandoval",
+    telefono: 3193421543,
+    ubicaciones: {
+      ciudad: "La Estrella",
+      direccion: "Calle 52 #71-43",
+    },
+  },
+  {
+    id: 15,
+    nombres: "William",
+    apellidos: "Espinosa Ospina",
+    telefono: 3129875432,
+    ubicaciones: {
+      ciudad: "Medellin",
+      direccion: "Carrera 65 #32-21",
+    },
+  },
 ];
-
-//Función para añadir un contacto nuevo a la lista
-
-function agregarContacto(nombreCompleto) {
-  listaDeContactos.push(nombreCompleto);
-}
-
-// Agregar un contacto nuevo a la lista
-
-console.log(
-  `El numero de contactos antes de agregar uno nuevo es ${listaDeContactos.length}`
-);
-agregarContacto("Daniela Ramirez Alvarez");
-console.log(
-  `El numero de contactos después de agregar uno nuevo es ${listaDeContactos.length}`
-);
-console.log(
-  `El ultimo contacto agregado a la lista fue ${
-    listaDeContactos[listaDeContactos.length - 1]
-  }`
-);
-
-console.log(listaDeContactos);
-
-//Función para borrar un contacto existente de la lista
-
-function eliminarContacto(nombreCompleto) {
-  let indice = listaDeContactos.indexOf(nombreCompleto);
-  console.log(indice);
-
-  if (indice >= 0) {
-    listaDeContactos.splice(indice, 1);
-  } else {
-    console.log(
-      `${nombreCompleto} no existe, por favor verifica el nombre completo`
-    );
-  }
-}
-
-eliminarContacto("Mateo restrepo mendoza");
-eliminarContacto("Lucia Vera Bedoya");
-
-//Función para imprimir en la consola los contactos de la lista
-
-function imprimirListaContactos() {
-  console.log(listaDeContactos);
-}
-
-imprimirListaContactos();
