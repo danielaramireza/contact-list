@@ -190,3 +190,30 @@ function retornarUltimoId() {
 }
 
 console.log(listaDeContactos);
+
+//Función para añadir un nuevo contacto(objeto) a la lista(array)
+
+function agregarContacto(nombres, apellidos, telefono, ciudad, direccion) {
+  let contactoNuevo = {
+    id: retornarUltimoId() + 1,
+    nombres: nombres,
+    apellidos: apellidos,
+    telefono: telefono,
+    ubicaciones: {
+      ciudad: ciudad,
+      direccion: direccion,
+    },
+  };
+  listaDeContactos.push(contactoNuevo);
+  ordenarContactos();
+}
+
+agregarContacto(
+  "Camila",
+  "Vallejo Solorzano",
+  3126432673,
+  "Cali",
+  "Calle 65 # 65-76"
+);
+
+//console.log(listaDeContactos);
