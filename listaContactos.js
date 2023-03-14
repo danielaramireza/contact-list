@@ -150,3 +150,30 @@ let listaDeContactos = [
     },
   },
 ];
+
+//Función para ordenar alfabéticamente la lista de contactos
+
+function ordenarContactos() {
+  listaDeContactos.sort(function (a, b) {
+    const nombresA = a.nombres.toUpperCase();
+    const nombresB = b.nombres.toUpperCase();
+    const apellidosA = a.apellidos.toUpperCase();
+    const apellidosB = b.apellidos.toUpperCase();
+
+    if (nombresA < nombresB) {
+      return -1;
+    } else if (nombresA > nombresB) {
+      return 1;
+    } else {
+      if (apellidosA < apellidosB) {
+        return -1;
+      } else if (apellidosA > apellidosB) {
+        return 1;
+      } else {
+        return 0;
+      }
+    }
+  });
+}
+
+ordenarContactos();
