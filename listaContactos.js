@@ -217,3 +217,20 @@ agregarContacto(
 );
 
 //console.log(listaDeContactos);
+
+//Función para eliminar un contacto(objeto) existente de la lista(array)
+
+function eliminarContacto(id) {
+  let indice = listaDeContactos.findIndex((objeto) => objeto.id === id);
+  console.log(indice);
+
+  if (indice >= 0) {
+    listaDeContactos.splice(indice, 1);
+  } else {
+    console.log(`El id: ${id} no existe, por favor verifica`);
+  }
+}
+
+eliminarContacto(1);
+
+console.log(listaDeContactos);
