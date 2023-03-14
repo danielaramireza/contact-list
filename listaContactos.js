@@ -177,3 +177,16 @@ function ordenarContactos() {
 }
 
 ordenarContactos();
+
+//Función para retornar el último id
+function retornarUltimoId() {
+  const ultimoId = listaDeContactos.reduce((max, objeto) => {
+    if (objeto.id > max) {
+      return objeto.id;
+    }
+    return max;
+  }, 0);
+  return ultimoId;
+}
+
+console.log(listaDeContactos);
