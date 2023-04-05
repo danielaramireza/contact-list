@@ -253,7 +253,7 @@ eliminarContacto(nombreEliminar);
 console.log(`Se elimino ${nombreEliminar} de la lista de contactos`);
 imprimirListaContactos();
 
-// Función para actualizar un contacto
+// Función para actualizar un contacto de la lista
 
 function actualizarContacto(nombre, datos) {
   let id = buscarIDporNombreYApellido(nombre);
