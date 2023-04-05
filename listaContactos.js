@@ -151,6 +151,33 @@ let listaDeContactos = [
   },
 ];
 
+//Función para ordenar alfabéticamente la lista de contactos
+
+function ordenarContactos() {
+  listaDeContactos.sort(function (a, b) {
+    const nombresA = a.nombres.toUpperCase();
+    const nombresB = b.nombres.toUpperCase();
+    const apellidosA = a.apellidos.toUpperCase();
+    const apellidosB = b.apellidos.toUpperCase();
+
+    if (nombresA < nombresB) {
+      return -1;
+    } else if (nombresA > nombresB) {
+      return 1;
+    } else {
+      if (apellidosA < apellidosB) {
+        return -1;
+      } else if (apellidosA > apellidosB) {
+        return 1;
+      } else {
+        return 0;
+      }
+    }
+  });
+}
+
+ordenarContactos();
+
 //Función para imprimir en consola los contactos presentes en la lista
 function imprimirListaContactos(campos = ["nombres", "apellidos", "telefono"]) {
   console.table(listaDeContactos, campos);
@@ -167,6 +194,33 @@ function retornarUltimoId() {
   return ultimoId;
 }
 
+//Función para añadir un nuevo contacto(objeto) a la lista(array)
+
+function agregarContacto(nombres, apellidos, telefono, ciudad, direccion) {
+  let contactoNuevo = {
+    id: retornarUltimoId() + 1,
+    nombres: nombres,
+    apellidos: apellidos,
+    telefono: telefono,
+    ubicaciones: {
+      ciudad: ciudad,
+      direccion: direccion,
+    },
+  };
+  listaDeContactos.push(contactoNuevo);
+  ordenarContactos();
+}
+
+agregarContacto(
+  "Camila",
+  "Vallejo Solorzano",
+  3126432673,
+  "Cali",
+  "Calle 65 # 65-76"
+);
+console.log("Se agrego Camila Vallejo Solorzano a la lista de contactos");
+imprimirListaContactos();
+
 // Función para buscar un contacto por nombre y apellido
 function buscarIDporNombreYApellido(nombreCompleto) {
   let persona = listaDeContactos.find(
@@ -179,7 +233,28 @@ function buscarIDporNombreYApellido(nombreCompleto) {
   }
 }
 
+//Función para eliminar un contacto(objeto) existente de la lista(array)
+
+function eliminarContacto(nombre) {
+  let id = buscarIDporNombreYApellido(nombre);
+  let indice = listaDeContactos.findIndex((objeto) => objeto.id === id);
+  // console.log(indice);
+
+  if (indice >= 0) {
+    listaDeContactos.splice(indice, 1);
+  } else {
+    console.log(`No se encontró el contacto: ${nombre}, por favor verifica`);
+  }
+}
+
+let nombreEliminar = "Adriana Cardona Velez";
+eliminarContacto(nombreEliminar);
+
+console.log(`Se elimino ${nombreEliminar} de la lista de contactos`);
+imprimirListaContactos();
+
 // Función para actualizar un contacto
+
 function actualizarContacto(nombre, datos) {
   let id = buscarIDporNombreYApellido(nombre);
   let indice = listaDeContactos.findIndex((objeto) => objeto.id === id);
